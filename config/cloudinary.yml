@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hasannaqvi10
+  api_key: '462939679794871'
+  api_secret: LRmEpGxL-TIt7RVivfoIoO0xO8o
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hasannaqvi10
+  api_key: '462939679794871'
+  api_secret: LRmEpGxL-TIt7RVivfoIoO0xO8o
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hasannaqvi10
+  api_key: '462939679794871'
+  api_secret: LRmEpGxL-TIt7RVivfoIoO0xO8o
+  enhance_image_tag: true
+  static_image_support: false

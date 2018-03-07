@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.4.0"
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem "paperclip", "~> 5.2.1"
+gem 'cloudinary'
+gem 'paperclip-cloudinary'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
