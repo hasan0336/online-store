@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem "paperclip", "~> 5.2.1"
 gem 'cloudinary'
 gem 'paperclip-cloudinary'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
