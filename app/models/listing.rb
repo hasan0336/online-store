@@ -8,4 +8,5 @@ class Listing < ApplicationRecord
 	# checks if price is a number and it is greater than 0
 	validates :price, numericality: { greater_than: 0 }
 	validates_attachment_presence :image
+	belongs_to :user
 end

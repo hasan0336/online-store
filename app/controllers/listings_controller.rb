@@ -24,8 +24,11 @@ class ListingsController < ApplicationController
   # POST /listings
   # POST /listings.json
   def create
+    # current_user is just like auth::user()
     @listing = Listing.new(listing_params)
-
+    # current_user.id will show up current user id and it will be equal to the user_id column in listing table
+    @listing.user_id = current_user.id
+    puts @listing.inspect
     respond_to do |format|
       if @listing.save
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
