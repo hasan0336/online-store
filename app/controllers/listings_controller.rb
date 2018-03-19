@@ -2,14 +2,20 @@ class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
 
   #user will be authenticated when below function will be called
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:seller,:new, :create, :edit, :update, :destroy]
   
   #sign_up user not allowed to update or delete listings belongs to other user
   before_action :check_user, only: [:edit, :update, :destroy]
+
+  def seller
+    #Listing is a model call which help to bring data from database
+    @listings = Listing.where(user: current_user).order("created_at DESC")
+  end
+
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    @listings = Listing.all.order("created_at DESC")
   end
 
   # GET /listings/1
